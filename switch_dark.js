@@ -1,8 +1,32 @@
 const input = document.querySelector("input[type='checkbox']");
 const body = document.querySelector("body");
 
+const applyDarkMode = () => {
+    body.classList.add("dark")
+}
+
+const removeDarkMode = () => {
+    body.classList.remove("dark")
+}
+
 const toggleThemeMode = () => {
-    body.classList.toggle("dark");
+    if (input.checked) {
+        applyDarkMode();
+        localStorage.setItem("darkMode", "true");
+    } else {
+        removeDarkMode();
+        localStorage.setItem("darkMode", "false")
+    }
 };
 
-input.onchange = toggleThemeMode;
+const savedDarkMode = localStorage.getItem("darkMode")
+
+if (savedDarkMode === "true") {
+    input.checked = true;
+    applyDarkMode();
+} else {
+    input.checked = false;
+    removeDarkMode();
+}
+
+input.addEventListener("change", toggleThemeMode);
