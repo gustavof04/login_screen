@@ -31,7 +31,6 @@ body.dark .login-container {
     background-color: #ffffff;
     max-width: 18.75rem;
     margin: 6.25rem auto;
-    width: 100%;
     padding: 1.25rem;
     border: 1px solid #ccc;
     border-radius: .313rem;
@@ -66,11 +65,12 @@ button:hover {
 }
 
 .switch {
-    position: relative;
+    display: flex;
     width: 3.5rem;
     height: 2rem;
-    left: 56rem;
-    bottom: 42rem;
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
 }
 .switch input {
     opacity: 0;
