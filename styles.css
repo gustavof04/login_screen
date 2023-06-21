@@ -1,3 +1,7 @@
+* {
+    font-family: 'Segoe UI', sans-serif;
+}
+
 html,
 body {
     height: 100%;
@@ -8,7 +12,7 @@ body {
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    font-family: "Roboto", arial, cursive;
+    font-family: 'Segoe UI', sans-serif;
     background-color: #f2f2f7;
     transition: 0.4s;
 }
@@ -21,6 +25,21 @@ body.dark .login-container {
     background-color: #212121;
     border: 1px solid #444444;
     color: #ffffff
+}
+
+label #switch-details {
+    color: #000000;
+    font-weight: 700;
+    font-size: 11px;
+    position: relative;
+    top: 1.5rem;
+    right: 0.5rem;
+    white-space: nowrap;
+    transition: 0.4s;
+}
+
+body.dark label #switch-details {
+    color: #ffffff;
 }
 
 .login-container {
@@ -59,6 +78,7 @@ button {
     background-color: #4caf50;
     color: #ffffff;
     font-size: 16px;
+    font-weight: 600;
     border: none;
     border-radius: 5px;
     cursor: pointer;
@@ -69,20 +89,11 @@ button:hover {
     background-color: #45a049;
 }
 
-@media (max-width: 600px) {
-    button {
-        font-size: 13px;
-    }
 
-    input[type="text"],
-    input[type="password"] {
-        font-size: 13px;
-    }
-}
 
 .switch-container {
     display: flex;
-    width: 3.5rem;
+    width: 4rem;
     height: 2rem;
     position: fixed;
     top: 1rem;
@@ -126,4 +137,31 @@ input:checked + .slider:before {
     left: calc(100% - 1.7rem);
     background: #37393f;
     box-shadow: inset -3px -2px 5px -2px #8983f7, inset -10px -4px 0 0 #a3dafb;
+}
+
+@media (max-width: 600px) {
+    h2 {
+        font-size: 20px;
+    }
+
+    button {
+        font-size: 13px;
+    }
+
+    input[type="text"],
+    input[type="password"] {
+        font-size: 13px;
+    }
+
+    label #switch-details {
+        white-space: inherit;
+        font-size: 14px;
+        text-align: right;
+        top: 1.2rem;
+        right: 0.2rem;
+    }
+
+    .switch-container {
+        width: 3.5rem;
+    }
 }
