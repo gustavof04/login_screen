@@ -70,6 +70,21 @@ input[type="password"] {
     box-sizing: border-box;
     border: 1px solid #ccc;
     border-radius: 5px;
+    text-indent: 1.6rem;
+}
+
+#user {
+    background-image: url(assets/user.svg);
+    background-repeat: no-repeat;
+    background-position: 9px 10px;
+    background-size: 20px;
+}
+
+#password {
+    background-image: url(assets/password.svg);
+    background-repeat: no-repeat;
+    background-position: 12px 10px;
+    background-size: 14px;
 }
 
 button {
@@ -151,6 +166,14 @@ input:checked + .slider:before {
     input[type="text"],
     input[type="password"] {
         font-size: 13px;
+    }
+
+    #user {
+        background-position: 8px, 10px;
+    }
+
+    #password {
+        background-position: 11px, 10px;
     }
 
     label #switch-details {
