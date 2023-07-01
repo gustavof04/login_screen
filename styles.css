@@ -73,14 +73,14 @@ input[type="password"] {
     text-indent: 1.6rem;
 }
 
-#user {
+#user-input {
     background-image: url(assets/user.svg);
     background-repeat: no-repeat;
     background-position: 9px 10px;
     background-size: 20px;
 }
 
-#password {
+#password-input {
     background-image: url(assets/password.svg);
     background-repeat: no-repeat;
     background-position: 12px 10px;
@@ -168,11 +168,11 @@ input:checked + .slider:before {
         font-size: 13px;
     }
 
-    #user {
+    #user-input {
         background-position: 8px, 10px;
     }
 
-    #password {
+    #password-input {
         background-position: 11px, 10px;
     }
 
